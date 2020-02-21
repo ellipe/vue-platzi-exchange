@@ -1,12 +1,15 @@
-import Vue from "vue";
-import App from "./App.vue";
-import "@/assets/css/tailwind.css";
+import Vue from 'vue'
+import App from './App.vue'
+import '@/assets/css/tailwind.css'
+import { dollarFilter, percentageFilter } from '@/filters'
 
-Vue.config.productionTip = false;
+Vue.filter('dollar', dollarFilter)
+Vue.filter('percentage', percentageFilter)
+Vue.config.productionTip = false
 
-import router from "@/router";
+import router from '@/router'
 
 new Vue({
   router,
   render: h => h(App)
-}).$mount("#app");
+}).$mount('#app')
