@@ -29,7 +29,7 @@
       >
         <td>
           <img
-            class="w-6 h-6"
+            class="w-16 h-16"
             :src="
               `https://static.coincap.io/assets/icons/${a.symbol.toLowerCase()}@2x.png`
             "
