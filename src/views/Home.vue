@@ -3,7 +3,7 @@
     <div class="flex justify-center">
       <bounce-loader :loading="isLoading" :color="'#68d391'" :size="100" />
     </div>
-    <px-assets-table v-if="!isLoading" :assets="assets" />
+    <px-assets-table v-show="!isLoading" :assets="assets" />
   </div>
 </template>
 
