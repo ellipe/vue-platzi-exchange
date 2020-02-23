@@ -9,13 +9,11 @@
 
 <script>
 import api from '@/api'
-import { BounceLoader } from '@saeris/vue-spinners'
 import PxAssetsTable from '@/components/PxAssetsTable'
 export default {
   name: 'Home',
   components: {
-    PxAssetsTable,
-    BounceLoader
+    PxAssetsTable
   },
 
   data() {
