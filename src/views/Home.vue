@@ -1,26 +1,36 @@
 <template>
   <div>
-    <px-assets-table :assets="assets" />
+    <div class="flex justify-center">
+      <bounce-loader :loading="isLoading" :color="'#68d391'" :size="100" />
+    </div>
+    <px-assets-table v-if="!isLoading" :assets="assets" />
   </div>
 </template>
 
 <script>
 import api from '@/api'
+import { BounceLoader } from '@saeris/vue-spinners'
 import PxAssetsTable from '@/components/PxAssetsTable'
 export default {
   name: 'Home',
   components: {
-    PxAssetsTable
+    PxAssetsTable,
+    BounceLoader
   },
 
   data() {
     return {
-      assets: []
+      assets: [],
+      isLoading: false
     }
   },
 
   created() {
-    api.getAssets().then(assets => (this.assets = assets))
+    this.isLoading = true
+    api
+      .getAssets()
+      .then(assets => (this.assets = assets))
+      .finally(() => (this.isLoading = false))
   }
 }
 </script>
