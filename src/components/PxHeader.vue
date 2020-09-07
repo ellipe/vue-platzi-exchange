@@ -5,7 +5,7 @@
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <PxIcon class="mr-4" />
           <router-link :to="{ name: 'home' }">
-            <span class="font-semibold text-xl tracking-tight">PlatziExchange</span>
+            <span class="font-semibold text-xl tracking-tight">ExchangeCenter</span>
           </router-link>
         </div>
         <div class="hidden sm:block w-full block flex-grow lg:flex lg:items-center lg:w-auto">
